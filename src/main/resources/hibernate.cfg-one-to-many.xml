@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/test_db_one_to_many</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">pgAdmin</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">create</property>
+		 <!-- make sure only one set of  entities are configured otherwise unexpected results can occur-->
+        <!-- i.e when testing for foreign key association include the entities from com.dci.hibernate.oneToMany.foreignKeyAsso package only and same for the joinTable case -->
+        <mapping class="com.dci.hibernate.oneToMany.joinTable.AccountEntity"/>
+        <mapping class="com.dci.hibernate.oneToMany.joinTable.EmployeeEntity"/>
+        <!-- <mapping class="com.dci.hibernate.oneToMany.foreignKeyAsso.AccountEntity"/>
+        <mapping class="com.dci.hibernate.oneToMany.foreignKeyAsso.EmployeeEntity"/> -->
+    </session-factory>
+</hibernate-configuration>
