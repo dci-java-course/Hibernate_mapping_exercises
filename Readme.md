@@ -1,5 +1,8 @@
 # Exercise # 7  - Hibernate Mappings (One To Many / Many To Many)
 
+Verify that you have PostgreSQL server (version > 9.6.25) and any sql client to connect to the PostgreSQL server pre-installed. If you don't have you can download the installer from [Here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). The installer includes the PostgreSQl server, pgAdmin: a graphical tool for managing and developing your databases.
+
+
 ## One to many association
 
 Hibernate one to many mapping is made between two entities where first entity can have relation with multiple second entity instances but second can be associated with only one instance of first entity. Its 1 to N relationship.
